@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "client": "cd baucua-client && npm start",
+    "install-client": "cd baucua-client && npm install",
+    "install-full": "npm install && cd baucua-client && npm install",
+    "build": "cd baucua-client && npm run build",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run start\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fastest-validator": "^1.9.0",
+    "lodash": "^4.17.20",
+    "nodemon": "^2.0.4",
+    "pm2": "^4.5.1",
+    "socket.io": "^2.3.0"
+  },
+  "engines": {
+    "node": "12.18.3"
+  }
+}
